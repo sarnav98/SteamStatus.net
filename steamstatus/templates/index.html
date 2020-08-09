@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>steamstatus</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="py-4">
+    <div class="container">
+        <header class="clearfix">
+            <h1>steamstatus</h1>
+            <p class="float-left">A Steam monitoring service built with Flask</p>
+            <p class="float-right">Updating in <span id="countdown"></span>s</p>
+        </header>
+
+        <div id="errormsg" class="alert alert-danger mt-4" role="alert" style="display: none;"></div>
+
+        <main class="row mt-4">
+            <div class="col h-100 mr-3 px-4 py-3 rounded status-group">
+                <h3>Steam Services</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://store.steampowered.com/stats/" target="_blank" rel="noopener">Online Users</a>
+                        <span id="online-users" class="status"></span>
+                    </li>
+                    <li>Steam Store <span id="store" class="status"></span></li>
+                    <li>Steam Community <span id="community" class="status"></span></li>
+                    <li>Steam Web API <span id="webApi" class="status"></span></li>
+                </ul>
+                <hr>
+                <h3>CS:GO Services</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://steamcharts.com/app/730" target="_blank" rel="noopener">Online Players</a>
+                        <span id="online-players" class="status"></span>
+                    </li>
+                    <li>Sessions Logon <span id="sessionsLogon" class="status"></span></li>
+                    <li>Player Inventories <span id="playerInventories" class="status"></span></li>
+                    <li>Matchmaking Scheduler <span id="matchmakingScheduler" class="status"></span></li>
+                </ul>
+            </div>
+            <div class="col h-100 ml-3 px-4 py-3 rounded status-group">
+                <h3>CS:GO Servers</h3>
+                {%- for k, v in regions.items() %}
+                <ul class="list-unstyled">
+                    {%- for region in v %}
+                    <li>
+                        <img src="{{ url_for('static', filename=region.flag.img) }}" alt="{{ region.flag }}">
+                        {{ region }} <span id="{{ region.id }}" class="status"></span>
+                    </li>
+                    {%- endfor %}
+                </ul>
+                {%- if not loop.last %}
+                <hr>
+                {%- endif %}
+                {%- endfor %}
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

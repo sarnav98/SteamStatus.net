@@ -1,0 +1,49 @@
+body {
+    color: white;
+    background: #1b2838;
+}
+
+a {
+    color: #2f89bc;
+}
+
+a:hover {
+    text-decoration: none;
+
+    color: #66c0f4;
+}
+
+hr {
+    border-top: 1px solid #29363d;
+}
+
+.status-group {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.status-group > ul {
+    /* Equals mb-0 */
+    margin-bottom: 0;
+}
+
+.status-group > ul > li > img {
+    /* Equals mr-2 */
+    margin-right: 0.5rem;
+}
+
+.status {
+    float: right;
+}
+
+/* Possible status colors */
+.good {
+    color: #6c9541;
+}
+
+.okay {
+    color: #53a4c4;
+}
+
+.bad {
+    color: #f44336;
+}
