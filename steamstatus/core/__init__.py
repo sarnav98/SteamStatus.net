@@ -2,7 +2,7 @@ import requests
 
 from steamstatus.config import API_KEY, REQUESTS_TIMEOUT
 
-ONLINE_USERS_URL = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=0"
+ONLINE_USERS_URL = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=730"
 STORE_URL = "https://store.steampowered.com/"
 COMMUNITY_URL = "https://steamcommunity.com/"
 WEB_API_URL = "https://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v1/"

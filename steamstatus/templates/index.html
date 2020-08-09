@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SteamStatus - Steam down?</title>
+    <title>SteamStatus - Get status of Steam</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <div class="container">
         <header class="clearfix">
             <h1>SteamStatus.net</h1>
-            <p class="float-left">A Steam monitoring service with Steam API</p>
+            <p class="float-left">A Steam monitoring service with Steam's Official APIs</p>
             <p class="float-right">Updating in <span id="countdown"></span>s</p>
         </header>
 
@@ -27,9 +27,9 @@
                 <h3>Steam Services</h3>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="https://store.steampowered.com/stats/" target="_blank" rel="noopener">Online Users</a>
+                        <a href="https://store.steampowered.com/stats/" target="_blank" rel="noopener">Online Users (CSGO)</a>
                         <span id="online-users" class="status"></span>
-                    </li>
+                    </li> 
                     <li>Steam Store <span id="store" class="status"></span></li>
                     <li>Steam Community <span id="community" class="status"></span></li>
                     <li>Steam Web API <span id="webApi" class="status"></span></li>
