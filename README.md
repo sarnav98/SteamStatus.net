@@ -1,4 +1,4 @@
-# SteamStatus.net
+<h1 style="text-align:center;">SteamStatus.net</h1>
 
 <h2 style="text-align:center;">Install</h2>
 <ul>
