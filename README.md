@@ -15,7 +15,7 @@
 <ul>
 <li>Open config.py and update Steam API key</li>
 <br>
-<p>EXAMPLE: API_KEY = "" # insert your key here, e.g. 204BE844F017F63E40E2F3D820EB8E9E</p>
+<p>EXAMPLE: API_KEY = "" # insert your key here, e.g. 204BE844F017F29Y40E2F3D820EB8E9E</p>
 </ul>
 <br>
 <h2 style="text-align:center;">Run</h2>
